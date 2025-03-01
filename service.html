@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>خرید سرویس</title>
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v21.2.1/dist/font-face.css" rel="stylesheet" type="text/css" />
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Vazir', sans-serif;
+  background: #f8f9fa;
+  text-align: right;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -40px; /* انتقال باکس 30 پیکسل به بالا */
+}
+
+.link {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background: #0088cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.link:hover {
+  opacity: 0.9;
+}
+.online {
+  display: inline-block;
+  margin: 10px 0;
+  padding: 10px 15px;
+  background: #468300;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.online:hover {
+  opacity: 0.9;
+}
+.icon {
+  width: 40px;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .icon {
+    width: 30px;
+  }
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1>خوش آمدید</h1>
+  <p>برای خرید سرویس لطفا به آی دی تلگرام یا پشتیبانی آنلاین پیام ارسال کنید</p>
+
+  <!-- آیکون تلگرام -->
+  <img src="telegram.png" alt="خرید اشتراک" class="icon">
+  <!-- لینک ها -->
+  <a class="link" href="https://t.me/prox_net" target="_blank">پیام در تلگرام</a>
+  <a class="link" href="javascript:void(0);" id="telegramLink" data-clipboard-text="@prox_net" dir="ltr">@prox_net</a>
+  <a class="online" href="#" onclick="LiveChatWidget.call('maximize'); return false;" target="_blank">ارتباط با پشتیبانی آنلاین</a>
+
+
+
+  
+
+  
+
+  
+</div>
+
+
+  <script>
+    // فعال‌سازی Clipboard.js
+    var clipboard = new ClipboardJS('#telegramLink');
+    
+    clipboard.on('success', function(e) {
+      console.log('کپی شد: ', e.text);
+      // می‌توانید اعلان یا پیام موفقیت را اینجا نمایش دهید
+    });
+    
+    clipboard.on('error', function(e) {
+      console.error('کپی نشد: ', e.action);
+      // می‌توانید اعلان یا پیام خطا را اینجا نمایش دهید
+    });
+  </script>
+
+
+  
+<!--
+    <script>
+    var protoUrl = "tg://resolve?domain=prox_net";
+    
+    if (false) {
+      var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;
+      var iframeEl = document.createElement('iframe');
+      iframeContEl.appendChild(iframeEl);
+      var pageHidden = false;
+      
+      window.addEventListener('pagehide', function () {
+        pageHidden = true;
+      }, false);
+      
+      window.addEventListener('blur', function () {
+        pageHidden = true;
+      }, false);
+      
+      if (iframeEl !== null) {
+        iframeEl.src = protoUrl;
+      }
+      
+      !false && setTimeout(function() {
+        if (!pageHidden) {
+          window.location = protoUrl;
+        }
+      }, 20000);
+    }
+    else if (protoUrl) {
+      setTimeout(function() {
+        window.location = protoUrl;
+      }, 20000);
+    }
+
+    var tme_bg = document.getElementById('tgme_background');
+    if (tme_bg) {
+      TWallpaper.init(tme_bg);
+      TWallpaper.animate(true);
+      window.onfocus = function(){ TWallpaper.update(); };
+    }
+    
+    document.body.classList.remove('no_transition');
+    
+    function toggleTheme(dark) {
+      document.documentElement.classList.toggle('theme_dark', dark);
+      window.Telegram && Telegram.setWidgetOptions({ dark: dark });
+    }
+    
+    if (window.matchMedia) {
+      var darkMedia = window.matchMedia('(prefers-color-scheme: dark)');
+      toggleTheme(darkMedia.matches);
+      
+      darkMedia.addListener(function(e) {
+        toggleTheme(e.matches);
+      });
+    }
+  </script>
+  -->
+
+  <!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+    const encodedUrl = 'aHR0cHM6Ly9zdGFyaWQuaXIvbGl2ZWNoYXQudHh0';
+    const decodedUrl = atob(encodedUrl);
+    fetch(decodedUrl)
+        .then(response => response.text())
+        .then(licenseNumber => {
+            window.__lc = window.__lc || {};
+            window.__lc.license = licenseNumber.trim();
+            window.__lc.integration_name = "manual_onboarding";
+            window.__lc.product_name = "livechat";
+            (function(n,t,c){
+                function i(n){
+                    return e._h?e._h.apply(null,n):e._q.push(n);
+                }
+                var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){
+                    var n=t.createElement("script");
+                    n.async=!0;
+                    n.type="text/javascript";
+                    n.src="https://cdn.livechatinc.com/tracking.js";
+                    t.head.appendChild(n);
+                }};
+                if(!n.__lc.asyncInit) e.init();
+                n.LiveChatWidget = n.LiveChatWidget || e;
+            })(window,document,[].slice);
+        });
+</script>
+<!-- End of LiveChat code -->
+</body>
+</html>
