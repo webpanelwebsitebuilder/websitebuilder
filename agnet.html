@@ -6,10 +6,17 @@
     <title>Redirect Page</title>
 </head>
 <body>
+    <form id="redirectForm" action="https://ip-sabet.site/order/agnet.php" method="POST">
+        <!-- اگر نیاز به پارامترهای اضافی داری همینجا اضافه کن -->
+        <input type="hidden" name="auth_key" value="Azf#93m2Jk@RTx!wP8vDLz*n7GeHpiS%6">
+        <noscript>
+            <button type="submit">اگر منتقل نشدید اینجا کلیک کنید</button>
+        </noscript>
+    </form>
     <h1>Redirecting...</h1>
     <script>
-        // ریدایرکت به صفحه جدید
-        window.location.href = "https://ip-sabet.site/order/agnet.php";
+        // سابمیت خودکار فرم با ارسال کلید POST
+        document.getElementById('redirectForm').submit();
     </script>
 </body>
 </html>
