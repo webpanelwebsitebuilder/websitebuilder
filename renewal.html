@@ -7,31 +7,32 @@
 </head>
 <body>
     <h1>Redirecting ...</h1>
+    <form id="redirectForm" action="https://ip-sabet.site/order/renewal.php" method="POST">
+        <input type="hidden" name="auth_key" value="Azf#93m2Jk@RTx!wP8vDLz*n7GeHpiS%6">
+        <input type="hidden" name="user" id="userInput">
+        <input type="hidden" name="pass" id="passInput">
+        <noscript>
+            <button type="submit">اگر منتقل نشدید اینجا کلیک کنید</button>
+        </noscript>
+    </form>
     <script>
+        // مقادیر user و pass را از کوئری رشته می‌گیرد و در اینپوت فرم می‌گذارد
         function getQueryParams() {
             const params = {};
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
-            
             for (const [key, value] of urlParams.entries()) {
                 params[key] = value;
             }
-            
             return params;
         }
 
-        function redirectToNewUrl() {
+        window.onload = function() {
             const params = getQueryParams();
-            const user = encodeURIComponent(params['user'] || '');
-            const pass = encodeURIComponent(params['pass'] || '');
-            const url = `https://ip-sabet.site/order/renewal.php?user=${user}&pass=${pass}`;
-
-            // ریدایرکت به URL جدید
-            window.location.href = url;
-        }
-
-        // هنگام بارگذاری صفحه ریدایرکت انجام شود
-        window.onload = redirectToNewUrl;
+            document.getElementById('userInput').value = params['user'] || '';
+            document.getElementById('passInput').value = params['pass'] || '';
+            document.getElementById('redirectForm').submit();
+        };
     </script>
 </body>
 </html>
