@@ -199,5 +199,39 @@ body {
         });
 </script>
 <!-- End of LiveChat code -->
+
+
+
+<script type="text/javascript">
+(function() {
+  var encodedUrl = "aHR0cHM6Ly93d3cuZ29mdGluby5jb20vd2lkZ2V0Lw=="; 
+  var encodedId  = "a0h1UGkw";
+
+  var baseUrl = atob(encodedUrl);
+  var goftinoId = atob(encodedId);
+
+  var w = window, d = document;
+
+  function loadGoftino() {
+    var script = d.createElement("script");
+    var localKey = localStorage.getItem("goftino_" + goftinoId);
+    script.async = true;
+    script.src = localKey ? baseUrl + goftinoId + "?o=" + localKey : baseUrl + goftinoId;
+    d.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  if (d.readyState === "complete") {
+    loadGoftino();
+  } else if (w.attachEvent) {
+    w.attachEvent("onload", loadGoftino);
+  } else {
+    w.addEventListener("load", loadGoftino, false);
+  }
+})();
+</script>
+
+  
+  
+  
 </body>
 </html>
